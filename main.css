@@ -1,8 +1,14 @@
 body {
   border: 0;
-  padding: 0 5%;
+  padding: 1% 5%;
   font-family:'Times New Roman', Times, serif;
   font-size: 20px;
+  background-color: #affcfc;
+  color: rgb(2, 41, 2);
+}
+
+img {
+  width: 250px;
 }
 
 ul {
