@@ -48,6 +48,10 @@
         userInput.value = '';
       }
     });
+    function printHobbies() {
+      const listItems = document.getElementById("hobbiesList");
+      alert(Array.from(listItems.children).map(item => item.textContent));
+    }
   </script>
 </body>
 
