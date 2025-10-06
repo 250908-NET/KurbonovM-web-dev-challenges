@@ -17,12 +17,15 @@
     <h1>About</h1>
     <p>
       I'm a motivated and detail-oriented junior AI-enabled full-stack .NET developer who brings both technical
-      expertise and a strategic mindset to every project I undertake. With a solid foundation spanning the entire software development
+      expertise and a strategic mindset to every project I undertake. With a solid foundation spanning the entire
+      software development
       lifecycle, I specialize in building robust, scalable applications that bridge powerful back-end architecture with
       intuitive, user-focused front-end experiences.
     </p>
     <h3>My hobbies</h3>
-    <ul>
+    <input id="userInput" />
+    <button onclick="addBtn()" id="addBtn">Add a hobby</button>
+    <ul id="hobbiesList">
       <li>Gym</li>
       <li>Hiking</li>
       <li>Swimming</li>
@@ -31,7 +34,21 @@
     </ul>
   </main>
 
+  <script>
+    const userInput = document.getElementById('userInput');
+    const addBtn = document.getElementById('addBtn');
+    const hobbiesList = document.getElementById('hobbiesList');
 
+    addBtn.addEventListener('click', function () {
+      const inputValue = userInput.value;
+      if (inputValue.trim() !== '') {
+        const hobby = document.createElement('li');
+        hobby.textContent = inputValue;
+        hobbiesList.appendChild(listItem);
+        userInput.value = '';
+      }
+    });
+  </script>
 </body>
 
 </html>
