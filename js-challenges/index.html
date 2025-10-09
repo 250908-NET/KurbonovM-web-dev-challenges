@@ -4,21 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Greeting Input</title>
+  <title>Number Squarer</title>
 </head>
 
 <body>
-  <h2>Enter your name:</h2>
-  <input type="text" id="nameInput" placeholder="Your name here">
-  <button onclick="greetUser()">Greet Me</button>
+  <h1>Square a Number</h1>
+  <input type="number" id="numberInput" placeholder="Enter a number">
+  <button onclick="squareNumber()">Square It!</button>
 
   <script>
-    function greetUser() {
-      let name = document.getElementById("nameInput").value;
-      if (name.trim() === "") {
-        alert("Please enter your name first!");
+    function square(n) {
+      return n * n;
+    }
+
+    function squareNumber() {
+      let num = document.getElementById("numberInput").value;
+      if (num === "") {
+        alert("Please enter a number first!");
       } else {
-        alert("Hello, " + name + "!");
+        let result = square(Number(num));
+        alert("The square is " + result);
       }
     }
   </script>
